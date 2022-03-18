@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+:root {
+  --elementColorLight: #fbf9ff;
+  --elementColorDark: #0e131f;
+  --bigFont: 24px;
+  --middiumFont: 18px;
+  --smallFont: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Noto Sans", sans-serif;
+  background: #38405f;
+  color: var(--elementColorLight);
+  display: grid;
+  place-content: center;
+}
+
+.box {
+  height: calc(100vh - 20vh);
+  width: calc(100vw - 50vw);
+  color: var(--elementColorDark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.btn {
+  font-size: var(--bigFont);
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  background: #babecc;
+  cursor: pointer;
+}
+.btn:active {
+  background: #777a86;
+  color: #fbf9ff;
+}
+.input {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  user-select: none;
+}
+.output {
+  background: var(--elementColorDark);
+  margin-bottom: 10px;
+  height: 300px;
+  border-radius: 12px;
+  padding: 20px;
+  letter-spacing: 2px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  word-break: break-all;
+}
+.currentOperands {
+  color: #ff0035;
+
+  font-size: var(--bigFont);
+}
+.previousOperands {
+  color: #ff5f7f;
+  margin-bottom: 10px;
+  font-size: var(--middiumFont);
+}
+@media screen and (max-width: 700px) {
+  .box {
+    height: calc(100vh - 30vh);
+    width: calc(100vw - 20vw);
+  }
+  .btn {
+    font-size: var(--middiumFont);
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #babecc;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .box {
+    height: calc(100vh - 30vh);
+    width: calc(100vw - 20vw);
+  }
+  .btn {
+    font-size: var(--smallFont);
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #babecc;
+    cursor: pointer;
+  }
+  .output {
+    background: var(--elementColorDark);
+    margin-bottom: 10px;
+    height: 300px;
+    border-radius: 12px;
+    padding: 20px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    word-break: break-all;
+  }
+  .currentOperands {
+    color: #ff0035;
+
+    font-size: var(--middiumFont);
+  }
+  .previousOperands {
+    color: #ff5f7f;
+
+    font-size: var(--smallFont);
+  }
+}
